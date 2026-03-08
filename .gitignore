@@ -1,0 +1,3 @@
+/data-processing/RAG/documents/*
+/data-processing/RAG/embeddings/*
+!.gitkeep
