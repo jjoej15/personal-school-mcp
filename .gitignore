@@ -1,3 +1,5 @@
 /data-processing/RAG/documents/*
 /data-processing/RAG/embeddings/*
+/venv/
+*__pycache__/
 !.gitkeep
