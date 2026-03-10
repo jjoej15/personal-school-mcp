@@ -28,6 +28,7 @@ class KVStore(kvstore_pb2_grpc.KeyValueStoreServicer):
 
         self.textbook_chunks = dict(state.get("textbook_chunks", {}))
         self.embeddings = dict(state.get("embeddings", {}))
+        print(f"Loaded {len(self.textbook_chunks)} records from {STATE_FILE}")
 
 
     def save_state(self):

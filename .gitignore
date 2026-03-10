@@ -2,4 +2,5 @@
 /data-processing/RAG/embeddings/*
 /venv/
 *__pycache__/
+kv-server/kvstore_state.pkl
 !.gitkeep
