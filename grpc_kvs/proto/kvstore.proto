@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package schoolmcp.kvstore;
+
+service KeyValueStore {
+    rpc Put(PutRequest) returns (PutResponse);
+    rpc StreamEmbeddings(StreamEmbeddingsRequest) returns (stream EmbeddingEntry);
+    rpc GetText(GetTextRequest) returns (GetTextResponse);
+    rpc Health(HealthRequest) returns (HealthResponse);
+}
+
+message PutRequest {
+  string key = 1;
+  string textbook_chunk = 2;
+  bytes embedding = 3;
+}
+
+message PutResponse { bool overwritten = 1; }
+
+message StreamEmbeddingsRequest {}
+
+message EmbeddingEntry {
+  string key = 1;
+  bytes embedding = 2;
+}
+
+message GetTextRequest {
+  string key = 1;
+}
+
+message GetTextResponse {
+  bool found = 1;
+  optional string textbook_chunk = 2;
+}
+
+message HealthRequest {}
+
+message HealthResponse {
+  string name = 1;
+  string version = 2;
+  uint64 key_count = 3;
+}

@@ -5,7 +5,6 @@ from typing import Dict, Iterable, List
 
 from sentence_transformers import SentenceTransformer
 
-
 SUPPORTED_EXTENSIONS = {".pdf", ".docx"}
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
