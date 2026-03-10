@@ -42,7 +42,7 @@ class KeyValueStoreStub(object):
         self.StreamEmbeddings = channel.unary_stream(
                 '/schoolmcp.kvstore.KeyValueStore/StreamEmbeddings',
                 request_serializer=kvstore__pb2.StreamEmbeddingsRequest.SerializeToString,
-                response_deserializer=kvstore__pb2.EmbeddingEntry.FromString,
+                response_deserializer=kvstore__pb2.StreamEmbeddingsResponse.FromString,
                 _registered_method=True)
         self.GetText = channel.unary_unary(
                 '/schoolmcp.kvstore.KeyValueStore/GetText',
@@ -94,7 +94,7 @@ def add_KeyValueStoreServicer_to_server(servicer, server):
             'StreamEmbeddings': grpc.unary_stream_rpc_method_handler(
                     servicer.StreamEmbeddings,
                     request_deserializer=kvstore__pb2.StreamEmbeddingsRequest.FromString,
-                    response_serializer=kvstore__pb2.EmbeddingEntry.SerializeToString,
+                    response_serializer=kvstore__pb2.StreamEmbeddingsResponse.SerializeToString,
             ),
             'GetText': grpc.unary_unary_rpc_method_handler(
                     servicer.GetText,
@@ -160,7 +160,7 @@ class KeyValueStore(object):
             target,
             '/schoolmcp.kvstore.KeyValueStore/StreamEmbeddings',
             kvstore__pb2.StreamEmbeddingsRequest.SerializeToString,
-            kvstore__pb2.EmbeddingEntry.FromString,
+            kvstore__pb2.StreamEmbeddingsResponse.FromString,
             options,
             channel_credentials,
             insecure,

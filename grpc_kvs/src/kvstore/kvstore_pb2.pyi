@@ -24,7 +24,7 @@ class StreamEmbeddingsRequest(_message.Message):
     __slots__ = ()
     def __init__(self) -> None: ...
 
-class EmbeddingEntry(_message.Message):
+class StreamEmbeddingsResponse(_message.Message):
     __slots__ = ("key", "embedding")
     KEY_FIELD_NUMBER: _ClassVar[int]
     EMBEDDING_FIELD_NUMBER: _ClassVar[int]

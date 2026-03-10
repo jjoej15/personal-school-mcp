@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rkvstore.proto\x12\x11schoolmcp.kvstore\"D\n\nPutRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x16\n\x0etextbook_chunk\x18\x02 \x01(\t\x12\x11\n\tembedding\x18\x03 \x01(\x0c\"\"\n\x0bPutResponse\x12\x13\n\x0boverwritten\x18\x01 \x01(\x08\"\x19\n\x17StreamEmbeddingsRequest\"0\n\x0e\x45mbeddingEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x11\n\tembedding\x18\x02 \x01(\x0c\"\x1d\n\x0eGetTextRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\"P\n\x0fGetTextResponse\x12\r\n\x05\x66ound\x18\x01 \x01(\x08\x12\x1b\n\x0etextbook_chunk\x18\x02 \x01(\tH\x00\x88\x01\x01\x42\x11\n\x0f_textbook_chunk\"\x0f\n\rHealthRequest\"B\n\x0eHealthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x11\n\tkey_count\x18\x03 \x01(\x04\x32\xdb\x02\n\rKeyValueStore\x12\x44\n\x03Put\x12\x1d.schoolmcp.kvstore.PutRequest\x1a\x1e.schoolmcp.kvstore.PutResponse\x12\x63\n\x10StreamEmbeddings\x12*.schoolmcp.kvstore.StreamEmbeddingsRequest\x1a!.schoolmcp.kvstore.EmbeddingEntry0\x01\x12P\n\x07GetText\x12!.schoolmcp.kvstore.GetTextRequest\x1a\".schoolmcp.kvstore.GetTextResponse\x12M\n\x06Health\x12 .schoolmcp.kvstore.HealthRequest\x1a!.schoolmcp.kvstore.HealthResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rkvstore.proto\x12\x11schoolmcp.kvstore\"D\n\nPutRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x16\n\x0etextbook_chunk\x18\x02 \x01(\t\x12\x11\n\tembedding\x18\x03 \x01(\x0c\"\"\n\x0bPutResponse\x12\x13\n\x0boverwritten\x18\x01 \x01(\x08\"\x19\n\x17StreamEmbeddingsRequest\":\n\x18StreamEmbeddingsResponse\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x11\n\tembedding\x18\x02 \x01(\x0c\"\x1d\n\x0eGetTextRequest\x12\x0b\n\x03key\x18\x01 \x01(\t\"P\n\x0fGetTextResponse\x12\r\n\x05\x66ound\x18\x01 \x01(\x08\x12\x1b\n\x0etextbook_chunk\x18\x02 \x01(\tH\x00\x88\x01\x01\x42\x11\n\x0f_textbook_chunk\"\x0f\n\rHealthRequest\"B\n\x0eHealthResponse\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x11\n\tkey_count\x18\x03 \x01(\x04\x32\xe5\x02\n\rKeyValueStore\x12\x44\n\x03Put\x12\x1d.schoolmcp.kvstore.PutRequest\x1a\x1e.schoolmcp.kvstore.PutResponse\x12m\n\x10StreamEmbeddings\x12*.schoolmcp.kvstore.StreamEmbeddingsRequest\x1a+.schoolmcp.kvstore.StreamEmbeddingsResponse0\x01\x12P\n\x07GetText\x12!.schoolmcp.kvstore.GetTextRequest\x1a\".schoolmcp.kvstore.GetTextResponse\x12M\n\x06Health\x12 .schoolmcp.kvstore.HealthRequest\x1a!.schoolmcp.kvstore.HealthResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -37,16 +37,16 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_PUTRESPONSE']._serialized_end=140
   _globals['_STREAMEMBEDDINGSREQUEST']._serialized_start=142
   _globals['_STREAMEMBEDDINGSREQUEST']._serialized_end=167
-  _globals['_EMBEDDINGENTRY']._serialized_start=169
-  _globals['_EMBEDDINGENTRY']._serialized_end=217
-  _globals['_GETTEXTREQUEST']._serialized_start=219
-  _globals['_GETTEXTREQUEST']._serialized_end=248
-  _globals['_GETTEXTRESPONSE']._serialized_start=250
-  _globals['_GETTEXTRESPONSE']._serialized_end=330
-  _globals['_HEALTHREQUEST']._serialized_start=332
-  _globals['_HEALTHREQUEST']._serialized_end=347
-  _globals['_HEALTHRESPONSE']._serialized_start=349
-  _globals['_HEALTHRESPONSE']._serialized_end=415
-  _globals['_KEYVALUESTORE']._serialized_start=418
-  _globals['_KEYVALUESTORE']._serialized_end=765
+  _globals['_STREAMEMBEDDINGSRESPONSE']._serialized_start=169
+  _globals['_STREAMEMBEDDINGSRESPONSE']._serialized_end=227
+  _globals['_GETTEXTREQUEST']._serialized_start=229
+  _globals['_GETTEXTREQUEST']._serialized_end=258
+  _globals['_GETTEXTRESPONSE']._serialized_start=260
+  _globals['_GETTEXTRESPONSE']._serialized_end=340
+  _globals['_HEALTHREQUEST']._serialized_start=342
+  _globals['_HEALTHREQUEST']._serialized_end=357
+  _globals['_HEALTHRESPONSE']._serialized_start=359
+  _globals['_HEALTHRESPONSE']._serialized_end=425
+  _globals['_KEYVALUESTORE']._serialized_start=428
+  _globals['_KEYVALUESTORE']._serialized_end=785
 # @@protoc_insertion_point(module_scope)

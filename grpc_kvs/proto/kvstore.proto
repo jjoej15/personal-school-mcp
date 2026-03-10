@@ -4,7 +4,7 @@ package schoolmcp.kvstore;
 
 service KeyValueStore {
     rpc Put(PutRequest) returns (PutResponse);
-    rpc StreamEmbeddings(StreamEmbeddingsRequest) returns (stream EmbeddingEntry);
+    rpc StreamEmbeddings(StreamEmbeddingsRequest) returns (stream StreamEmbeddingsResponse);
     rpc GetText(GetTextRequest) returns (GetTextResponse);
     rpc Health(HealthRequest) returns (HealthResponse);
 }
@@ -19,7 +19,7 @@ message PutResponse { bool overwritten = 1; }
 
 message StreamEmbeddingsRequest {}
 
-message EmbeddingEntry {
+message StreamEmbeddingsResponse {
   string key = 1;
   bytes embedding = 2;
 }
