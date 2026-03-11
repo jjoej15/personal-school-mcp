@@ -1,0 +1,9 @@
+{
+	"servers": {
+		"personal-school-mcp": {
+			"command": "python",
+			"args": ["${workspaceFolder}/mcp-server/server.py"]
+		}
+	},
+	"inputs": []
+}
