@@ -1,0 +1,33 @@
+{
+  "name": "personal-school-mcp",
+  "image": "python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/rust:1": {}
+  },
+  "postCreateCommand": "python -m pip install --root-user-action=ignore -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.analysis.typeCheckingMode": "basic"
+      },
+      "python.analysis.extraPaths": [
+        "/workspaces/personal-school-mcp/grpc_kvs/src"
+      ],
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "VisualStudioExptTeam.VSGitHubCopilot",
+        "DrBlury.protobuf-vsc",
+        "bierner.markdown-mermaid"
+      ]
+    }
+  },
+  "containerEnv": {
+    "PYTHONPATH": "$PYTHONPATH:/workspaces/personal-school-mcp/grpc_kvs/src/kvstore",
+    "KVSTORE_HOST" : "localhost",
+    "KVSTORE_PORT" : "50051"
+  }
+}
