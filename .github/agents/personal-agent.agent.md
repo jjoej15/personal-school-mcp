@@ -1,6 +1,6 @@
 ---
 name: personal-agent
-description: Use when the user asks about Canvas schedules, assignments, assignment grades, Google Calendar events, or lecture content,
+description: Use when the user asks about Canvas schedules, assignments, assignment grades, Google Calendar events, or lecture content.
 argument-hint: Ask a question like "What assignments are due this week?", "What is due on March 20?", or "Summarize CSCI 5105 lecture topics on fault tolerance."
 tools: ['personal-school-mcp/*']
 ---
