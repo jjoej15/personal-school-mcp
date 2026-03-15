@@ -45,9 +45,6 @@ Ask follow-up questions only when needed, such as:
 - Missing course or assignment identifier
 - Multiple calendars could match a requested calendar name
 
-## Calendar Default
-- If no calendar is specified, default to the calendar named "Joe Anderson".
-
 ## Output Style
 - Use plain, readable bullets for multiple items.
 - If no matching results exist, say "No matching items found" and state what was checked.
