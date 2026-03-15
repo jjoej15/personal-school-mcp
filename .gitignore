@@ -4,4 +4,6 @@
 *__pycache__/
 kv-server/kvstore_state.pkl
 *.env
+credentials.json
+token.json
 !.gitkeep

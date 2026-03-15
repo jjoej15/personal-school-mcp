@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 
 from canvas_tools import register_canvas_tools
+from gcal_tools import register_google_calendar_tools
 from lecture_tools import register_lecture_slide_tools
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -18,6 +19,7 @@ embedding_model = SentenceTransformer(MODEL_NAME)
 
 register_lecture_slide_tools(mcp, embedding_model, SERVER_ADDRESS)
 register_canvas_tools(mcp)
+register_google_calendar_tools(mcp)
 
 if __name__ == "__main__":
     mcp.run()
