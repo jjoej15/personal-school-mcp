@@ -2,6 +2,8 @@
 
 RAG + MCP server project that connects AI agents to a user's Canvas account, Google Calendar, and a local gRPC key-value store that holds lecture slide embeddings. Allows user to ask an AI assistant personalized questions about course schedules, assignments, and lecture content using 6 MCP tools.
 
+Blog post: https://www.joejanderson.dev/projects/mcp-project
+
 What was implemented:
 
 - A document ingestion pipeline that reads `.pdf` and `.docx` lecture material, normalizes text, chunks content, generates embeddings, and writes JSONL records.
